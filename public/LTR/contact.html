@@ -22,13 +22,13 @@
     <nav class="navbar inner_pages">
         <div class="menu">
             <ul class="d-none d-xl-flex">
-                <li><a href="index.html">home</a></li>
-                <li><a href="services.html">services</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="programs.html">programs</a></li>
-                <li><a href="news.html">news</a></li>
-                <li><a href="../RTL/index.html">AR <img src="../img/eg.png" alt=""></a></li>
-                <li><a href="http://127.0.0.1:8000/contact/en" class="contact_menu active_link">contact us</a></li>
+                <li><a id="indexLink">home</a></li>
+                <li><a id="servicesLink">services</a></li>
+                <li><a id="aboutLink">about</a></li>
+                <li><a id="programsLink">programs</a></li>
+                <li><a id="newsLink">news</a></li>
+                <li><a id="RTLLink">AR <img src="../img/US.png" style="width: 29px;" alt=""></a></li>
+                <li><a id="contactLink" class="contact_menu active_link">contact us</a></li>
             </ul>
             <button id="open-nav" class="open-menu d-xl-none border-0">
                 <i class="fa-solid fa-bars"></i>
@@ -48,13 +48,14 @@
             <button class="border-0" id="close"><i class="fas fa-xmark"></i></button>
         </div>
         <ul class="menu">
-            <li><a href="index.html">home</a></li>
-            <li><a href="services.html">services</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="programs.html">programs</a></li>
-            <li><a href="news.html">news</a></li>
-            <li><a href="http://127.0.0.1:8000/contact/en" class="contact_menu active_link">contact us</a></li>
-            <li><a href="../RTL/index.html" class="lang">AR <img src="../img/eg.png" alt=""></a></li>
+
+            <li><a id="indexLink">home</a></li>
+                <li><a id="servicesLink">services</a></li>
+                <li><a id="aboutLink">about</a></li>
+                <li><a id="programsLink">programs</a></li>
+                <li><a id="newsLink">news</a></li>
+                <li><a id="contactLink" class="contact_menu active_link">contact us</a></li>
+                <li><a id="RTLLink"class="lang">AR <img src="../img/eg.png" alt=""></a></li>
         </ul>
     </nav> 
     
@@ -178,5 +179,31 @@
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/select2.min.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        var hostname = window.location.hostname;
+
+
+        // <li><a href="index.html">home</a></li>
+        //     <li><a href="services.html">services</a></li>
+        //     <li><a href="about.html">about</a></li>
+        //     <li><a href="programs.html">programs</a></li>
+        //     <li><a href="news.html">news</a></li>
+        //     <li><a href="http://127.0.0.1:8000/contact/en" class="contact_menu active_link">contact us</a></li>
+        //     <li><a href="../RTL/index.html" class="lang">AR <img src="../img/eg.png" alt=""></a></li>
+
+
+        var port = window.location.port
+
+
+        document.getElementById("indexLink").href = "http://" + hostname + "/LTR/index.html";
+        document.getElementById("servicesLink").href = "http://" + hostname + "/LTR/services.html";
+        document.getElementById("aboutLink").href = "http://" + hostname + "/LTR/about.html";
+        document.getElementById("programsLink").href = "http://" + hostname + "/LTR/programs.html";
+        document.getElementById("newsLink").href = "http://" + hostname + "/LTR/news.html";
+        document.getElementById("RTLLink").href = "http://" + hostname + "/RTL/index.html";
+        document.getElementById("contactLink").href = "http://" + hostname + ":" +  port + "/contact/en";
+    </script>
+
 </body>
 </html>

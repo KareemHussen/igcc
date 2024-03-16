@@ -22,13 +22,13 @@
     <nav class="navbar inner_pages">
         <div class="menu">
             <ul class="d-none d-xl-flex">
-                <li><a href="http://127.0.0.1:8000/RTL/index.html">الرئيسية</a></li>
-                <li><a href="http://127.0.0.1:8000/RTL/services.html">خدماتنا</a></li>
-                <li><a href="http://127.0.0.1:8000/RTL/about.html">عن الشركة</a></li>
-                <li><a href="http://127.0.0.1:8000/RTL/programs.html">البرامج التدريبية</a></li>
-                <li><a href="http://127.0.0.1:8000/RTL/news.html">الاخبار</a></li>
-                <li><a href="../LTR/index.html">EN <img src="../img/US.png" style="width: 29px;" alt=""></a></li>
-                <li><a href="http://127.0.0.1:8000/contact/ar" class="contact_menu active_link">تواصل معنا</a></li>
+                <li><a id="indexLink">الرئيسية</a></li>
+                <li><a id="servicesLink">خدماتنا</a></li>
+                <li><a id="aboutLink">عن الشركة</a></li>
+                <li><a id="programsLink">البرامج التدريبية</a></li>
+                <li><a id="newsLink">الاخبار</a></li>
+                <li><a id="LTRLink">EN <img src="../img/US.png" style="width: 29px;" alt=""></a></li>
+                <li><a id="contactLink" class="contact_menu active_link">تواصل معنا</a></li>
             </ul>
             <button id="open-nav" class="open-menu d-xl-none border-0">
                 <i class="fa-solid fa-bars"></i>
@@ -48,13 +48,13 @@
             <button class="border-0" id="close"><i class="fas fa-xmark"></i></button>
         </div>
         <ul class="menu">
-            <li><a href="http://127.0.0.1:8000/RTL/index.html">الرئيسية</a></li>
-            <li><a href="http://127.0.0.1:8000/RTL/services.html">خدماتنا</a></li>
-            <li><a href="http://127.0.0.1:8000/RTL/about.html">عن الشركة</a></li>
-            <li><a href="http://127.0.0.1:8000/RTL/programs.html">البرامج التدريبية</a></li>
-            <li><a href="http://127.0.0.1:8000/RTL/news.html">الاخبار</a></li>
-            <li><a href="http://127.0.0.1:8000/contact/ar" class="contact_menu active_link">تواصل معنا</a></li>
-            <li><a href="../LTR/index.html" class="lang">EN <img src="../img/US.png" style="width: 29px;" alt=""></a></li>
+            <li><a id="indexLink">الرئيسية</a></li>
+            <li><a id="servicesLink">خدماتنا</a></li>
+            <li><a id="aboutLink">عن الشركة</a></li>
+            <li><a id="programsLink">البرامج التدريبية</a></li>
+            <li><a id="newsLink">الاخبار</a></li>
+            <li><a id="LTRLink" class="lang">EN <img src="../img/US.png" style="width: 29px;" alt=""></a></li>
+            <li><a id="contactLink" class="contact_menu active_link">تواصل معنا</a></li>
         </ul>
     </nav> 
     
@@ -172,5 +172,27 @@
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/select2.min.js"></script>
     <script src="../js/rtl.js"></script>
+
+    <script>
+        var hostname = window.location.hostname;
+
+
+                // <li><a id="indexLink">الرئيسية</a></li>
+                // <li><a id="servicesLink">خدماتنا</a></li>
+                // <li><a id="aboutLink">عن الشركة</a></li>
+                // <li><a id="programsLink">البرامج التدريبية</a></li>
+                // <li><a id="newsLink">الاخبار</a></li>
+                // <li><a id="LTRLink">EN <img src="../img/US.png" style="width: 29px;" alt=""></a></li>
+                // <li><a id="contactLink" class="contact_menu active_link">تواصل معنا</a></li>
+
+        document.getElementById("indexLink").href = "http://" + hostname + "/RTL/index.html";
+        document.getElementById("servicesLink").href = "http://" + hostname + "/RTL/services.html";
+        document.getElementById("aboutLink").href = "http://" + hostname + "/RTL/about.html";
+        document.getElementById("programsLink").href = "http://" + hostname + "/RTL/programs.html";
+        document.getElementById("newsLink").href = "http://" + hostname + "/RTL/news.html";
+        document.getElementById("LTRLink").href = "http://" + hostname + "/LTR/index.html";
+        document.getElementById("contactLink").href = "http://" + hostname + "/contact/ar";
+    </script>
+    
 </body>
 </html>
